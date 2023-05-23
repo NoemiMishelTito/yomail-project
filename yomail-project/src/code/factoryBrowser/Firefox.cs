@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
 
 namespace yomail_project.src.code.factoryBrowser
 {
@@ -6,7 +7,12 @@ namespace yomail_project.src.code.factoryBrowser
     {
         public IWebDriver Create()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Setup");
+            string path = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
+            IWebDriver driver = new FirefoxDriver(path + "/resources/driver/mgeckodriver.exe");
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
+            driver.Manage().Window.Maximize();
+            return driver;
         }
     }
 }

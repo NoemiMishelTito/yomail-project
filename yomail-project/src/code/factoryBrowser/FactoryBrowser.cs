@@ -14,8 +14,8 @@ namespace yomail_project.src.code.factoryBrowser
                 case "firefox":
                     browser = new Firefox();
                     break;
-                case "edgge":
-                    browser = new Edgge();
+                case "edge":
+                    browser = new Edge();
                     break;
                 default:
                     browser = new Chrome();
