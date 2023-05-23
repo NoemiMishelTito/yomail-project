@@ -15,7 +15,7 @@ namespace yomail_project.src.code.control
         {
             this.locator = locator;
             iframe = Session.Instance().GetBrowser();
-            iframe.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
+            iframe.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1);
         }
 
         protected void FindControl()

@@ -30,6 +30,11 @@ namespace yomail_project.src.code.page
             msgSend.IsControlDisplayed();
             msgSend.Click();
         }
+
+        public void MouseHover() 
+        {
+            deliverBtn.mouseOver();
+        }
         public bool CheckMessage()
         {
             return msgSent.IsControlDisplayed();

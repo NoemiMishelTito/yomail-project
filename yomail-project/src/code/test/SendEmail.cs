@@ -23,12 +23,10 @@ namespace yomail_project.src.code.test
             //Verify Message was send
             Assert.IsTrue(viewEmail.CheckMessage(), "The message was not sent successfully.");
             viewEmail.returnI();
-            Thread.Sleep(3000);
             emailManager.ShowInbox();
             viewEmail.SwithIframe();
+            viewEmail.MouseHover();
             Assert.IsTrue(viewEmail.CheckDeliver(), "The message has not been received");
-            Thread.Sleep(3000);
-
         }
     }
 }

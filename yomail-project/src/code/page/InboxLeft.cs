@@ -15,6 +15,7 @@ namespace yomail_project.src.code.page
         }
         public void ShowInbox()
         {
+            Thread.Sleep(2000);
             refresBtn.Click();
         }
     }
